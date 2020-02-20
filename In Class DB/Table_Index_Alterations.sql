@@ -23,5 +23,8 @@ use employees;
 #DELETE FROM department;
 
 #Creating an index
-CREATE INDEX idx_eln
-	ON employee(eln ASC);
+#CREATE INDEX idx_eln
+#	ON employee(eln ASC);
+    
+DROP INDEX idx_eln
+	ON employee;

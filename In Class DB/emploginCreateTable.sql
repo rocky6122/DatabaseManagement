@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS emplogin;
+
+CREATE TABLE emplogin(
+eid INT NOT NULL,
+euser VARCHAR(255) NOT NULL,
+epswd VARCHAR(255) NOT NULL,
+PRIMARY KEY(eid),
+CONSTRAINT FK_emplogin
+	FOREIGN KEY(eid)
+    REFERENCES employee(eid)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
+SELECT * FROM emplogin;
