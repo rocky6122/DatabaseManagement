@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS Address (
   est CHAR(2) NOT NULL,
   ezip CHAR(5) NOT NULL,
   PRIMARY KEY (eaid))
+ENGINE = INNODB
 ;
 
 
@@ -45,8 +46,9 @@ CREATE TABLE IF NOT EXISTS Employee (
   CONSTRAINT fk_Employee_Address
     FOREIGN KEY (eaid)
     REFERENCES Address (eaid)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = INNODB
 ;
 
 
@@ -59,6 +61,7 @@ CREATE TABLE IF NOT EXISTS Contact (
   cid INT NOT NULL,
   contact_type VARCHAR(45) NOT NULL,
   PRIMARY KEY (cid))
+ENGINE = INNODB
 ;
 
 
@@ -71,6 +74,7 @@ CREATE TABLE IF NOT EXISTS Department (
   dept_id INT NOT NULL,
   dept_name VARCHAR(45) NOT NULL,
   PRIMARY KEY (dept_id))
+ENGINE = INNODB
 ;
 
 
@@ -88,8 +92,9 @@ CREATE TABLE IF NOT EXISTS Job (
   CONSTRAINT fk_Job_Department1
     FOREIGN KEY (dept_id)
     REFERENCES Department (dept_id)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = INNODB
 ;
 
 
@@ -102,6 +107,7 @@ CREATE TABLE IF NOT EXISTS HistoryStatus (
   status_id INT NOT NULL,
   status_desc VARCHAR(45) NOT NULL,
   PRIMARY KEY (status_id))
+ENGINE = INNODB
 ;
 
 
@@ -123,18 +129,19 @@ CREATE TABLE IF NOT EXISTS EmpHistory (
   CONSTRAINT fk_EmpHistory_Employee1
     FOREIGN KEY (eid)
     REFERENCES Employee (eid)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT fk_EmpHistory_Job1
     FOREIGN KEY (pos_id)
     REFERENCES Job (pos_id)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT fk_EmpHistory_HistoryStatus1
     FOREIGN KEY (status_id)
     REFERENCES HistoryStatus (status_id)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = INNODB
 ;
 
 
@@ -153,13 +160,14 @@ CREATE TABLE IF NOT EXISTS EmployeeContact (
   CONSTRAINT fk_EmployeeContact_Employee1
     FOREIGN KEY (eid)
     REFERENCES Employee (eid)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT fk_EmployeeContact_Contact1
     FOREIGN KEY (cid)
     REFERENCES Contact (cid)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = INNODB
 ;
 
 
@@ -172,6 +180,7 @@ CREATE TABLE IF NOT EXISTS SalaryType (
   sal_id INT NOT NULL,
   sal_desc VARCHAR(45) NOT NULL,
   PRIMARY KEY (sal_id))
+ENGINE = INNODB
 ;
 
 
@@ -190,13 +199,14 @@ CREATE TABLE IF NOT EXISTS JobSalary (
   CONSTRAINT fk_JobSalaryType_Job1
     FOREIGN KEY (pos_id)
     REFERENCES Job (pos_id)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT fk_JobSalaryType_SalaryType1
     FOREIGN KEY (sal_id)
     REFERENCES SalaryType (sal_id)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = INNODB
 ;
 
 

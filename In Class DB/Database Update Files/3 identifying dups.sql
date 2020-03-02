@@ -1,7 +1,7 @@
 use employees;
 
-drop temporary table if exists realdups;
-create temporary table if not exists realdups(
+drop table if exists realdups;
+create table if not exists realdups(
 eid int not null primary key,
 efn varchar(255) not null,
 eln varchar(255) not null,
@@ -58,4 +58,4 @@ where e.efn = rd.efn and
 								a.eaid = rd.eaid
 group by a.estreet
 having count(*)<2
-order by eln,estreet
+order by e.eid,eln,estreet
