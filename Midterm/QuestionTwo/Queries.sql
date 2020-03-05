@@ -18,10 +18,16 @@ WHERE studentCourse.course_id = "MTH 280";
 */
 
 #Question 3
-#TODO
+/*
+SELECT * FROM building LEFT JOIN room on
+	building.bid = room.bid
+WHERE building.bid IS NULL
+OR room.bid IS NULL;
+*/
 
 #Question 4
-#ASK CLARIFICATION FOR QUESTION
+#Find the classrooms that have classes vs no classes but are "class rooms"
+#Left or Right Join Time
 /*
 SELECT room_num, seats, bname FROM room join building on
 	room.bid = building.bid
