@@ -1,0 +1,51 @@
+Twitter Clone Needs
+
+TABLES
+------------------------------
+Users
+
+Tweets
+
+Retweet
+
+Follow/Unfollow
+
+favorite/unfavorite tweets
+
+
+
+QUERY FEATURES
+--------------------------------
+Insert new tweet
+
+Delete Tweet
+
+retweet
+
+follow user
+
+unfollow user
+
+favorite a tweet
+
+unfavorite a tweet
+
+User Timelines (Tweets/Retweets)
+
+see a users favorited tweets
+
+see a list of who a users following
+
+see a list of a users followers
+
+Check how many times a tweet has been favorited
+
+Check how many times a tweet has been retweeted
+
+Count of Followers
+
+Count of followings
+
+
+
+

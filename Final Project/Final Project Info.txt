@@ -1,0 +1,32 @@
+Final Exam up on canvas now
+
+final exam due monday 27th to friday the 1st (frank has no idea)
+
+Honestly Option 1 sounds pretty complicated. Not sure I know enough to successfully make 
+the twitter site
+
+Option 2 just sounds like an essay. Thats easy peasy. Done
+
+
+talk about history
+
+talk about the NoSQL like the reader has never heard of it
+reader can understand MySQL
+
+
+show how queries work vs mySQL
+mySQL is relational, how is NoSQL organized?
+
+
+How is the NoSQL database typically used
+-understand features and drawbacks of NoSQL
+-use cases
+
+comparrisons
+talk about how to get data in and out
+
+basically just work through a mySQL example, then show it again
+in NoSQL
+
+use MLA format
+
